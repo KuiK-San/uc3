@@ -7,13 +7,14 @@
     <title>Form PHP</title>
 </head>
 <body>
-    <form action="" method="post">
+    <h2>CRUD</h2>
+    <form action="processa.php" method="post">
         <p>
-            <label for="" name="titulo">Titulo</label>
+            <label for="" name="titulo">Titulo</label> <br>
             <input type="text" name="titulo" id="">
         </p>
         <p>
-            <label for="">Descrição</label>
+            <label for="">Descrição</label> <br>
             <textarea name="descricao" cols="30" rows="10"></textarea>
         </p>
         <input type="submit" value="Enviar">
