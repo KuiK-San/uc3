@@ -24,6 +24,38 @@
             <input type="submit" value="Enviar">
         </fieldset>
     </form>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Data de Criação</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                require('conexao.php');
+                
+                $query = "SELECT * FROM `tarefa`";
+                
+                $sql = mysqli_query($conexao, $query);
+
+                while ($row = mysqli_fetch_assoc($sql)) { ?>
+
+                    <tr>
+                        <td> <?php echo $row['titulo'] ?> </td>
+                        <td> <?php echo $row['descricao'] ?> </td>
+                        <td> <?php echo $row['data'] ?> </td>
+                        <td> <a href="#">Alterar</a>&nbsp; <a href="excluir.php?id=<?php echo $row['id']?>">Excluir</a> </td>
+
+                    </tr>
+            <?php       
+                }
+            ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
