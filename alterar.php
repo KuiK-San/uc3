@@ -21,18 +21,17 @@
     $row = mysqli_fetch_assoc($sql);
 
 
-    $id = $row['id'];
+    $id = $row['id'];   
     $titulo = $row['titulo'];
     $descricao = $row['descricao'];
 
     ?>
     <h2>CRUD</h2>
-    <form action="update.php" method="post">
+    <form action="update.php?id=<?php echo $id ?>" method="post">
         <fieldset>
             <legend>Cadastro de tarefas</legend>
             <p>
                 <label for="">Id</label> <br>
-
                 <input type="text" name="id" id="" value="<?php echo $id ?>" disabled>
             </p>
             <p>
