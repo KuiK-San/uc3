@@ -18,12 +18,12 @@
 
     $sql = mysqli_query($conexao, $query);
 
-    $row = mysqli_fetch_assoc($sql);
+    $info = mysqli_fetch_assoc($sql);
 
 
-    $id = $row['id'];   
-    $titulo = $row['titulo'];
-    $descricao = $row['descricao'];
+    $id = $info['id'];   
+    $titulo = $info['titulo'];
+    $descricao = $info['descricao'];
 
     ?>
     <h2>CRUD</h2>
