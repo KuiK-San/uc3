@@ -48,7 +48,7 @@
                         <td> <?php echo $row['titulo'] ?> </td>
                         <td> <?php echo $row['descricao'] ?> </td>
                         <td> <?php echo $row['data'] ?> </td>
-                        <td> <a href="#">Alterar</a>&nbsp; <a href="excluir.php?id=<?php echo $row['id']?>">Excluir</a> </td>
+                        <td> <a href="alterar.php?id=<?php echo $row['id']?>">Alterar</a>&nbsp; <a href="excluir.php?id=<?php echo $row['id']?>">Excluir</a> </td>
 
                     </tr>
             <?php       
