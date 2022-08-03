@@ -10,7 +10,7 @@
 
 <body>
     <h2>CRUD</h2>
-    <form action="processa.php" method="post">
+    <form action="../controler/insert.php" method="post">
         <fieldset>
             <legend>Cadastro de tarefas</legend>
             <p>
@@ -36,7 +36,7 @@
         </thead>
         <tbody>
             <?php
-                require('conexao.php');
+                require('../model/conexao.php');
                 
                 $query = "SELECT * FROM `tarefa`";
                 
@@ -48,7 +48,7 @@
                         <td> <?php echo $row['titulo'] ?> </td>
                         <td> <?php echo $row['descricao'] ?> </td>
                         <td> <?php echo $row['data'] ?> </td>
-                        <td> <a href="alterar.php?id=<?php echo $row['id']?>">Alterar</a>&nbsp; <a href="excluir.php?id=<?php echo $row['id']?>">Excluir</a> </td>
+                        <td> <a href="alterar.php?id=<?php echo $row['id']?>">Alterar</a>&nbsp; <a href="../controler/excluir.php?id=<?php echo $row['id']?>">excluir </a> </td>
 
                     </tr>
             <?php       

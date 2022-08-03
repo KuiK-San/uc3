@@ -12,7 +12,7 @@
     <?php
     $id = $_GET["id"];
 
-    require('conexao.php');
+    require('../model/conexao.php');
 
     $query = "SELECT `id`, `titulo`, `descricao` FROM `tarefa` WHERE `id` = $id";
 
@@ -27,7 +27,7 @@
 
     ?>
     <h2>CRUD</h2>
-    <form action="update.php?id=<?php echo $id ?>" method="post">
+    <form action="../controler/update.php.php?id=<?php echo $id ?>" method="post">
         <fieldset>
             <legend>Cadastro de tarefas</legend>
             <p>

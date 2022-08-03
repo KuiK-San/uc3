@@ -1,7 +1,7 @@
 <?php
 //incluir
 
-require('conexao.php');
+require('../model/conexao.php');
 
 $titulo = $_POST['titulo'];
 $descricao = $_POST['descricao'];
@@ -10,5 +10,5 @@ $query = "INSERT INTO `tarefa`( `titulo`, `descricao`) VALUES ('$titulo','$descr
 
 $sql = mysqli_query($conexao, $query);
 
-header("location: form.php");
+header("location: ../view/index.php");
 ?>
