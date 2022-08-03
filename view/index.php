@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if((isset($_SESSION['usee']) == true) and (!isset($_SESSION['senha']))){
+    
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
