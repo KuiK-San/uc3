@@ -27,7 +27,7 @@
 
     ?>
     <h2>CRUD</h2>
-    <form action="../controler/update.php.php?id=<?php echo $id ?>" method="post">
+    <form action="../controler/update.php?id=<?php echo $id ?>" method="post">
         <fieldset>
             <legend>Cadastro de tarefas</legend>
             <p>
