@@ -34,14 +34,6 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     <title>Login</title>
 </head>
 <body>
-    <div class="alerta">
-        <?php
-        if(isset($_SESSION['erro_login'])){
-            echo $_SESSION['erro_login'];
-        }
-        //session_unset();
-        ?>
-    </div>
     <h1>CRUD</h1>
     <form action="login.php" method="post">
         <p>
