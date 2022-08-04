@@ -25,7 +25,6 @@ $logado = $_SESSION['usuario'];
 </head>
 
 <body>
-
     <div class="alerta">
         <?php
         if(isset($_SESSION['mensagem'])){

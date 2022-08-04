@@ -11,11 +11,14 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION['senha'] = $senha;
 
         $_SESSION['mensagem'] = 'Bem-vindo';
-        
+
         header('location: index.php');
     }else{
         unset($_SESSION['usuario']);
         unset($_SESSION['senha']);
+
+        $_SESSION['erro_login'] = 'Usuario ou senha invalidos';
+
 
         header('location: login.php');
     }
@@ -31,6 +34,14 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     <title>Login</title>
 </head>
 <body>
+    <div class="alerta">
+        <?php
+        if(isset($_SESSION['erro_login'])){
+            echo $_SESSION['erro_login'];
+        }
+        //session_unset();
+        ?>
+    </div>
     <h1>CRUD</h1>
     <form action="login.php" method="post">
         <p>
@@ -45,5 +56,19 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
             <input type="submit" value="Entrar">
         </p>
     </form>
+    <script>
+        const $alerta = document.querySelector('.alerta');
+
+        if($alerta){
+            setTimeout(() => {
+                $alerta.remove();
+            }, 3000);
+        }
+
+        function Removebuton(){
+            $alerta.remove()
+        }
+        
+    </script>
 </body>
 </html>
