@@ -10,6 +10,8 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION['usuario'] = $usuario;
         $_SESSION['senha'] = $senha;
 
+        $_SESSION['mensagem'] = 'Bem-vindo';
+        
         header('location: index.php');
     }else{
         unset($_SESSION['usuario']);
@@ -37,7 +39,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         </p>
         <p>
             <label for="senha">Senha</label><br>
-            <input type="text" name="senha">
+            <input type="password" name="senha">
         </p>
         <p>
             <input type="submit" value="Entrar">

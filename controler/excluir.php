@@ -8,6 +8,9 @@
 
     $sql = mysqli_query($conexao, $query);
 
+    $_SESSION['mensagem'] = 'tarefa excluida com sucesso!!!!';
+
+
     header('location: ../view/index.php');
 
 ?>

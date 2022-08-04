@@ -11,6 +11,9 @@ $query = "UPDATE `tarefa` SET `titulo`='$titulo',`descricao`='$descricao' WHERE 
 
 $sql = mysqli_query($conexao, $query);
 
+$_SESSION['mensagem'] = 'tarefa alterada com sucesso!!!!';
+
+
 header("location: ../view/index.php");
 
 ?>
