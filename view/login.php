@@ -2,12 +2,12 @@
 
 session_start();
 
-if (isset($_POST['user']) && isset($_POST['senha'])) {
-    $usuario = $_POST['user'];
+if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
+    $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    if ($usuario == 'guilherme' && $senha == '12345') {
-        $_SESSION['user'] = $usuario;
+    if ($usuario == "guilherme" && $senha == "12345") {
+        $_SESSION['usuario'] = $usuario;
         $_SESSION['senha'] = $senha;
 
         header('location: index.php');
@@ -32,8 +32,8 @@ if (isset($_POST['user']) && isset($_POST['senha'])) {
     <h1>CRUD</h1>
     <form action="login.php" method="post">
         <p>
-            <label for="user">Usuário</label><br>
-            <input type="text" name="user">
+            <label for="usuario">Usuário</label><br>
+            <input type="text" name="usuario">
         </p>
         <p>
             <label for="senha">Senha</label><br>

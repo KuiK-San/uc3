@@ -2,9 +2,14 @@
 
 session_start();
 
-if((isset($_SESSION['usee']) == true) and (!isset($_SESSION['senha']))){
-    
+if((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == true)){
+    unset($_SESSION['usuario']);
+    unset($_SESSION['senha']);
+
+    header('location: login.php');
 }
+
+$logado = $_SESSION['usuario'];
 
 ?>
 
@@ -21,6 +26,7 @@ if((isset($_SESSION['usee']) == true) and (!isset($_SESSION['senha']))){
 
 <body>
     <h2>CRUD</h2>
+    <a href="logout.php">Logout</a>
     <form action="../controler/insert.php" method="post">
         <fieldset>
             <legend>Cadastro de tarefas</legend>
