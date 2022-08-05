@@ -46,7 +46,7 @@ $logado = $_SESSION['usuario'];
             </p>
             <p>
                 <label for="">Descrição</label> <br>
-                <textarea name="descricao" cols="30" rows="10"></textarea>
+                <textarea name="descricao" cols="30" rows="10" required></textarea>
             </p>
             <input type="submit" value="Enviar">
         </fieldset>
