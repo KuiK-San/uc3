@@ -8,7 +8,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
 
     include('../model/conexao.php');
 
-    $query = "SELECT * FROM `usuario` WHERE `usuario` = '$user_login' AND `senha` = '$senha_login';";
+    $query = "SELECT * FROM `usuarios` WHERE `user` = '$user_login' AND `senha` = '$senha_login';";
 
     $sql = mysqli_query($conexao, $query);
 
