@@ -17,10 +17,10 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     $senha_db = $row['senha'];
 
     if ($senha_login == $senha_db) {
-        $_SESSION['usuario'] = $usuario;
-        $_SESSION['senha'] = $senha;
+        $_SESSION['usuario'] = $user_login;
+        $_SESSION['senha'] = $senha_login;
 
-        $_SESSION['mensagem'] = 'Bem-vindo';
+        $_SESSION['mensagem'] = 'Bem-vindo ' . $_SESSION['usuario'];
 
         header('location: ../view/index.php');
     }else{

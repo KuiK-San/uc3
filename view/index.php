@@ -42,7 +42,7 @@ $logado = $_SESSION['usuario'];
             <legend>Cadastro de tarefas</legend>
             <p>
                 <label for="" name="titulo">Titulo</label> <br>
-                <input type="text" name="titulo" id="">
+                <input type="text" name="titulo" id="" required>
             </p>
             <p>
                 <label for="">Descrição</label> <br>

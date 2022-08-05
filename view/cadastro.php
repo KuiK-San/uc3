@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
-    <h1>CRUD</h1>
-    <form action="../controler/log.php" method="post">
+<h1>CRUD</h1>
+    <form action="../controler/cadastro_db.php" method="post">
         <p>
             <label for="usuario">Usuário</label><br>
             <input type="text" name="usuario" required>
@@ -18,23 +18,9 @@
             <input type="password" name="senha" required>
         </p>
         <p>
-            <input type="submit" value="Entrar">
-            <a href="cadastro.php">Não tem uma conta? Crie</a>
+            <input type="submit" value="Cadastrar">
+            <a href="login.php">Já tem uma conta? Entre</a>
         </p>
     </form>
-    <script>
-        const $alerta = document.querySelector('.alerta');
-
-        if($alerta){
-            setTimeout(() => {
-                $alerta.remove();
-            }, 3000);
-        }
-
-        function Removebuton(){
-            $alerta.remove()
-        }
-        
-    </script>
 </body>
 </html>
