@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>CRUD</h1>
-    <form action="log.php" method="post">
+    <form action="../controler/log.php" method="post">
         <p>
             <label for="usuario">Usuário</label><br>
             <input type="text" name="usuario">

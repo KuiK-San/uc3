@@ -22,7 +22,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
 
         $_SESSION['mensagem'] = 'Bem-vindo';
 
-        header('location: index.php');
+        header('location: ../view/index.php');
     }else{
         unset($_SESSION['usuario']);
         unset($_SESSION['senha']);
@@ -30,11 +30,11 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION['erro_login'] = 'Usuario ou senha invalidos';
 
 
-        header('location: login.php');
+        header('location: ../view/login.php');
     }
 
 
 }else{
-    header('location: login.php');
+    header('location: ../view/login.php');
 }
 ?>
