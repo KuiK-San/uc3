@@ -2,7 +2,7 @@
 
 session_start();
 
-/* if (!empty($_POST['usuario']) && !empty($_POST['senha'])) { */
+if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
@@ -47,5 +47,7 @@ session_start();
 
         header('location: login.php');
     } */
-/* } */
+}else{
+    header('location: login.php');
+}
 ?>
