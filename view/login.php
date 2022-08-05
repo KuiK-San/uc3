@@ -1,30 +1,3 @@
-<?php
-
-session_start();
-
-if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
-
-    if ($usuario == "guilherme" && $senha == "12345") {
-        $_SESSION['usuario'] = $usuario;
-        $_SESSION['senha'] = $senha;
-
-        $_SESSION['mensagem'] = 'Bem-vindo';
-
-        header('location: index.php');
-    }else{
-        unset($_SESSION['usuario']);
-        unset($_SESSION['senha']);
-
-        $_SESSION['erro_login'] = 'Usuario ou senha invalidos';
-
-
-        header('location: login.php');
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +8,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
 </head>
 <body>
     <h1>CRUD</h1>
-    <form action="login.php" method="post">
+    <form action="log.php" method="post">
         <p>
             <label for="usuario">Usuário</label><br>
             <input type="text" name="usuario">
