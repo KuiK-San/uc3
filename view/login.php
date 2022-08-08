@@ -25,11 +25,13 @@
                                 <legend>Login</legend>
                                 <div class="mb-3">
                                     <label for="usuario" class="form-label">Usuário</label> <br>
-                                    <input type="text" name="usuario" class="form-control" required placeholder="Digite o Usuario">
+                                    <input type="text" name="usuario" class="form-control" required
+                                        placeholder="Digite o Usuario">
                                 </div>
                                 <div class="mb-3">
                                     <label for="senha" class="form-label">Senha</label> <br>
-                                    <input type="password" name="senha" class="form-control" required placeholder="Digite a senha">
+                                    <input type="password" name="senha" class="form-control" required
+                                        placeholder="Digite a senha">
                                 </div>
                                 <div class="mb-3 text-center">
                                     <input type="submit" value="Entrar" class="btn btn-primary btn-block"> <br>
@@ -39,22 +41,9 @@
                         </form>
                     </div>
                 </div>
-        </div>
+            </div>
         </div>
     </div>
-    <script>
-    const $alerta = document.querySelector('.alerta');
-
-    if ($alerta) {
-        setTimeout(() => {
-            $alerta.remove();
-        }, 3000);
-    }
-
-    function Removebuton() {
-        $alerta.remove()
-    }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

@@ -11,6 +11,7 @@ $query = "INSERT INTO `tarefa`( `titulo`, `descricao`) VALUES ('$titulo','$descr
 $sql = mysqli_query($conexao, $query);
 
 $_SESSION['mensagem'] = 'tarefa salva com sucesso!!!!';
+$_SESSION['tipomsg'] = 'success';
 
 header("location: ../view/index.php");
 ?>

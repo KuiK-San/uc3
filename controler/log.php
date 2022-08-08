@@ -21,13 +21,15 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION['senha'] = $senha_login;
 
         $_SESSION['mensagem'] = 'Bem-vindo ' . $_SESSION['usuario'];
+        $_SESSION['tipomsg'] = 'success';
 
         header('location: ../view/index.php');
     }else{
         unset($_SESSION['usuario']);
         unset($_SESSION['senha']);
 
-        $_SESSION['erro_login'] = 'Usuario ou senha invalidos';
+        $_SESSION['mensagem'] = 'Usuario ou senha invalidos';
+        $_SESSION['tipomsg'] = 'success';
 
 
         header('location: ../view/login.php');

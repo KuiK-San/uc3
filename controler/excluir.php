@@ -9,6 +9,7 @@
     $sql = mysqli_query($conexao, $query);
 
     $_SESSION['mensagem'] = 'tarefa excluida com sucesso!!!!';
+    $_SESSION['tipomsg'] = 'danger';
 
 
     header('location: ../view/index.php');

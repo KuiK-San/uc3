@@ -9,7 +9,8 @@ $query = "INSERT INTO `usuarios`(`user`, `senha`) VALUES ('$user','$password')";
 
 $sql = mysqli_query($conexao, $query);
 
-$_SESSION['mensagem'] = 'tarefa salva com sucesso!!!!';
+$_SESSION['mensagem'] = 'Cadastrado com sucesso!!';
+$_SESSION['tipomsg'] = 'success';
 
 header("location: ../view/login.php");
 ?>
