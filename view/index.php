@@ -17,8 +17,6 @@ $logado = $_SESSION['usuario'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>form php</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-    <!-- FONT AWESOEM -->
     <script src="https://kit.fontawesome.com/61b248fb6c.js" crossorigin="anonymous"></script>
 </head>
 

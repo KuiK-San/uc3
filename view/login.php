@@ -17,12 +17,12 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h2>CRUD</h2>
+                        <h2>Login</h2>
                     </div>
                     <div class="card-body">
                         <form action="../controler/log.php" method="post">
                             <fieldset>
-                                <legend>Login</legend>
+                                
                                 <div class="mb-3">
                                     <label for="usuario" class="form-label">Usuário</label> <br>
                                     <input type="text" name="usuario" class="form-control" required

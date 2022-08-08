@@ -17,12 +17,12 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h2>CRUD</h2>
+                        <h2>Cadastro</h2>
                     </div>
                     <div class="card-body">
                         <form action="../controler/cadastro_db.php" method="post">
                             <fieldset>
-                                <legend>Cadastro</legend>
+                                
                                 <div class="mb-3">
                                     <label for="usuario" class="form-label">Usuário</label> <br>
                                     <input type="text" name="usuario" class="form-control" required
@@ -34,7 +34,7 @@
                                         placeholder="Digite uma nova senha">
                                 </div>
                                 <div class="mb-3 text-center">
-                                    <input type="submit" value="Cadastrar" class="btn btn-primary btn-block"> <br>
+                                    <input type="submit" value="Cadastrar" class="btn btn-success btn-block"> <br>
                                     <a href="login.php">Já tem uma conta? Entre</a>
                                 </div>
                             </fieldset>
