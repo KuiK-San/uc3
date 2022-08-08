@@ -30,8 +30,8 @@
 
     include('header.php');
     ?>
-    <div class="row" style="margin-top: 2%;">
-        <div class="col-4">
+    <div class="row d-flex justify-content-center" style="margin-top: 2%;">
+        <div class="col-4 ">
                 <div class="card card-body">
                     <form action="../controler/update.php?id=<?php echo $id ?>" method="post">
                         <fieldset>
