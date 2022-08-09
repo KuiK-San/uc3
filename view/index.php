@@ -31,7 +31,7 @@ $logado = $_SESSION['usuario'];
                         </div>
                         <div class="form-group">
                             <textarea name="descricao" cols="30" rows="5" placeholder="Descrição"
-                                class="form-control"></textarea>
+                                class="form-control" max-length="150"></textarea>
                         </div>
                         <input type="submit" value="Enviar" class="btn btn-success btn-block">
                     </form>
@@ -56,7 +56,7 @@ $logado = $_SESSION['usuario'];
                             <td> <?php echo $row['titulo']; ?> </td>
                             <td> <?php echo $row['descricao']; ?> </td>
                             <td> <?php echo $row['data']; ?> </td>
-                            <td>
+                            <td class="flex-nowrap">
                                 <a href="alterar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                                     <i class="fas fa-marker"></i>
                                 </a>
