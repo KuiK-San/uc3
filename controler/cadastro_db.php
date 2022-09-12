@@ -3,7 +3,7 @@
 require('../model/conexao.php');
 
 $user = $_POST['usuario'];
-$password = $_POST['senha'];
+$password = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 $query = "INSERT INTO `usuarios`(`user`, `senha`) VALUES ('$user','$password')";
 
