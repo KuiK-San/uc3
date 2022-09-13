@@ -20,6 +20,14 @@
                         <h2>Login</h2>
                     </div>
                     <div class="card-body">
+                        <?php
+                        session_start();
+                        if(isset($_SESSION['errouser'])){ ?>
+                            <p class="text-center text-danger">Usuario ou senha incorretos</p><?php
+                            unset($_SESSION['errouser']);
+                        }
+                        ?>
+                       
                         <form action="../controler/log.php" method="post">
                             <fieldset>
                                 

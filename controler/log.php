@@ -8,15 +8,16 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
 
     include('../model/conexao.php');
 
-    $query = "SELECT * FROM `usuarios` WHERE `user` = '$user_login' AND `senha` = '$senha_login';";
+    $query = "SELECT * FROM `usuarios` WHERE `user` = '$user_login'";
 
     $sql = mysqli_query($conexao, $query);
 
     $row = mysqli_fetch_assoc($sql);
 
-    $senha_db = $row['senha'];
-
-    if ($senha_login == $senha_db) {
+    $senha_db = strval($row['senha']);
+    $temsenha = password_verify($senha_login, $senha_db); 
+    
+    if ($temsenha) {
         $_SESSION['usuario'] = $user_login;
         $_SESSION['senha'] = $senha_login;
 
@@ -28,7 +29,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
         unset($_SESSION['usuario']);
         unset($_SESSION['senha']);
 
-        $_SESSION['mensagem'] = 'Usuario ou senha invalidos';
+        $_SESSION['errouser'] = TRUE;
         $_SESSION['tipomsg'] = 'success';
 
 
