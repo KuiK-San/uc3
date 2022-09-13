@@ -15,6 +15,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     $row = mysqli_fetch_assoc($sql);
 
     $senha_db = strval($row['senha']);
+/* Comparing the password entered by the user with the password stored in the database. */
     $temsenha = password_verify($senha_login, $senha_db); 
     
     if ($temsenha) {
